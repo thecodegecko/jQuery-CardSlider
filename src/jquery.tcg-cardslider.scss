@@ -1,0 +1,49 @@
+$defaultduration: 250ms;
+
+@mixin vendor-prefix($name, $argument) {
+	-webkit-#{$name}: #{$argument};
+	-ms-#{$name}: #{$argument};
+	-moz-#{$name}: #{$argument};
+	-o-#{$name}: #{$argument};
+	#{$name}: #{$argument};
+}
+
+@mixin transition($property: all, $duration: $defaultduration, $easing: ease) {
+	@include vendor-prefix(transition, $property $duration $easing);
+}
+
+$prefix: tcg-cs-;
+
+.#{$prefix}cards
+{
+	position: relative;
+	overflow: hidden;
+
+	&.#{$prefix}animate
+	{
+		@include transition(height, $defaultduration);
+	}
+	.#{$prefix}card
+	{
+		width: 100%;
+		position: absolute;
+		overflow: hidden;
+		@include vendor-prefix(transform, translateX(100%));
+		@include vendor-prefix(box-sizing, border-box);
+
+		&.#{$prefix}animate
+		{
+			@include transition(transform, $defaultduration);
+			display: block;
+		}
+		&.#{$prefix}active
+		{
+			@include vendor-prefix(transform, none);
+			display: block;
+		}
+		&.#{$prefix}out
+		{
+			@include vendor-prefix(transform, translateX(-100%));
+		}
+	}
+}

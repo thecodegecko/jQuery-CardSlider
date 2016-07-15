@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+
+	<title>The Code Gecko - jQuery-Plugin - Card-Slider</title>
+
+	<!--// FAVICON (32x32) //-->
+	<link rel="shortcut icon" href="" />
+	<!--// END FAVICON //-->
+
+	<!--// VIEPORT OPTIONS //-->
+	<!--// Normal scaleability //-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--// STYLES & SCRIPTS //-->
+	<link rel="stylesheet" type="text/css" href="css/screen.core.css">
+	<link rel="stylesheet" type="text/css" href="../dist/jquery.tcg-cardslider.min.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="../dist/jquery.tcg-cardslider.js"></script>
+	<script src="js/jquery.tcg-cs-demo.js"></script>
+	<!--// END STYLES & SCRIPTS //-->
+</head>
+
+<body>
+	<section id="content">
+		<div class="container text-center">
+			<p>Select card to slide to:</p>
+			<div class="btn-group" role="group">
+				<button type="button" class="btn btn-default toggle-step" data-step="1">1</button>
+				<button type="button" class="btn btn-default toggle-step" data-step="2">2</button>
+				<button type="button" class="btn btn-default toggle-step" data-step="3">3</button>
+				<button type="button" class="btn btn-default toggle-step" data-step="5">4</button>
+			</div>
+		</div>
+		<div class="container">
+			<ul class="slides">
+				<li class="slide"></li>
+			</ul>
+		</div>
+		<div class="container">
+			<div class="card-box">
+				<div class="avatar">
+				</div>
+				<div class="cards">
+					<div class="card" data-step="1">
+						<div class="content">
+							<form id="validate-username" action="">
+								<input type="text" id="user-email" name="email" placeholder="Enter e-mail address" value="" />
+								<button type="submit">Next</button>
+							</form>
+						</div>
+					</div>
+					<div class="card" data-step="2">
+						<div class="content">
+							<div class="user-info">
+								<p class="user-name"><strong>The Code Gecko</strong></p>
+								<p class="user-mail">thecodegecko@gmail.com</p>
+							</div>
+							<form id="validate-username" action="">
+								<input type="hidden" name="email" value="" />
+								<input type="password" id="user-pwd" name="email" placeholder="Enter password" value="" />
+								<button type="submit">Login</button>
+							</form>
+						</div>
+					</div>
+					<div class="card" data-step="3">
+						<div class="content">
+							<p>Step 3</p>
+						</div>
+					</div>
+					<div class="card" data-step="4">
+						<div class="content">
+							<p>Step 4</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+
+</html>
