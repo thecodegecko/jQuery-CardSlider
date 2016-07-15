@@ -37,6 +37,23 @@ body {
 }
 //	END CodePen/Basic Styles
 
+.slides
+{
+	margin-top: 30px;
+	.slide
+	{
+		padding: 0 15px;
+
+		> p
+		{
+			border-radius: 15px;
+			margin: 0;
+			padding: 15px;
+			background: #CCCCCC;
+		}
+	}
+}
+
 .card-box {
 
 	p

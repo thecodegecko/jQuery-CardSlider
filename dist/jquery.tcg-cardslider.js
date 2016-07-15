@@ -125,6 +125,10 @@
 
 			}
 		}
+		_this.get = function(param)
+		{
+
+		}
 		_this.destroy = function()
 		{
 			_$cards.off('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', onTransitionEnd);
