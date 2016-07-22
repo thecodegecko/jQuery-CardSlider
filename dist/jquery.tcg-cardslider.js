@@ -58,7 +58,7 @@
 					_currentStep = i;
 				}
 			});
-			if(_currentStep)
+			if(!isNaN(_currentStep))
 			{
 				_$element.height(_cards[_currentStep].outerHeight() + 'px').addClass(cssPrefix + 'animate');
 				_this.select(_currentStep);
@@ -177,7 +177,3 @@
 ---------------------------------------------
 */
 
-var enableLog = true;
-function log(msg){
-	if(enableLog || typeof console!=="undefined") console.log(msg)
-}

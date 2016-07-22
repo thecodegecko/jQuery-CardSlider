@@ -9,3 +9,8 @@ $(document).ready(function () {
 		$('.cards').cardslider('select', $(this).data('step'));
 	})
 })
+
+var enableLog = true;
+function log(msg){
+	if(enableLog || typeof console!=="undefined") console.log(msg)
+}
